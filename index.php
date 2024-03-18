@@ -40,7 +40,7 @@
 
     ];
 
-    var_dump($hotels)
+    $hotelKeys = array_keys($hotels[0]);
 
 ?>
 
@@ -59,7 +59,11 @@
         <table class="table">
             <thead>
                 <tr>
-
+                    <?php
+                        foreach ($hotelKeys as $key){
+                            echo "<th>$key</th>";    
+                        }
+                    ?>
                 </tr>
             </thead>
             <tbody>
@@ -67,15 +71,6 @@
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
                 </tr>
             </tbody>
         </table>
