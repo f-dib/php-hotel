@@ -67,11 +67,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
+                <?php
+                    foreach ($hotels as $currentHotel){
+                        echo "<tr>";
+                            foreach ($currentHotel as $currentInfo){
+                                echo "<td> $currentInfo </td>";
+                            }
+                        echo "</tr>";
+                    }
+                ?>
             </tbody>
         </table>
     </div>
