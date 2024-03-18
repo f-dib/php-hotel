@@ -40,6 +40,8 @@
 
     ];
 
+    var_dump($hotels)
+
 ?>
 
 
@@ -53,40 +55,29 @@
 </head>
 <body>
     
-    <div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <?php 
-                    foreach($hotels as $currentHotel) {
-                        foreach($currentHotel as $key = $value){
-                            echo " <th scope="col">$key</th> 
-                            var_dump($key)"
-                        }
-                    }
-                ?>    
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            </tr>
-        </tbody>
+    <div class="container-xxl py-5">
+        <table class="table">
+            <thead>
+                <tr>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
