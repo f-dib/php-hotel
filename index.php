@@ -42,6 +42,16 @@
 
     $hotelKeys = array_keys($hotels[0]);
 
+    $parking = $_GET['parking'];
+
+    if($parking) {
+
+        $hotels = array_filter($hotels, function ($hotels){
+            return $hotels['parking'];
+        });
+
+    };
+
 ?>
 
 
@@ -56,6 +66,13 @@
 <body>
     
     <div class="container-xxl py-5">
+        <form>
+            <div class="mb-3">
+                <label for="parking" class="form-check-label">Mostra solo con parcheggio</label>
+                <input type="checkbox" class="form-check-input" id="parking" name="parking">
+            </div>
+            <input type="submit">
+        </form>
         <table class="table">
             <thead>
                 <tr>
@@ -78,6 +95,7 @@
                 ?>
             </tbody>
         </table>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
